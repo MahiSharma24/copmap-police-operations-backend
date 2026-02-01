@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27018/copmapdb   # Change port if your MongoDB is different
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false         # Keep ISO 8601 date format
+    time-zone: Asia/Kolkata                     # IST timezone
+
+server:
+  port: 8080                                   # Spring Boot server port
+  servlet:
+    context-path: /                            # Optional, default is "/"
+
+logging:
+  level:
+    org.springframework: INFO                  # General Spring logs
+    com.copmap.bandobast_service: DEBUG       # Debug logs for your package
